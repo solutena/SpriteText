@@ -47,6 +47,8 @@ public class SpriteText : Text
 	public override void SetVerticesDirty()
 	{
 		base.SetVerticesDirty();
+		if (spriteAtlas == null)
+			return;
 		Changed();
 	}
 
@@ -160,6 +162,15 @@ public class SpriteText : Text
 			go.transform.SetParent(Selection.activeGameObject.transform);
 		Undo.RegisterCreatedObjectUndo(go, "CreateSpriteText");
 		Selection.activeGameObject = go;
+	}
+
+	protected override void OnEnable()
+	{
+		if (spriteAtlas == null)
+		{
+			Debug.LogError("SpriteAtlas is null", gameObject);
+			return;
+		}
 	}
 
 	public Sprite GetSprite(string name, SpriteAtlas spriteAtlas)
