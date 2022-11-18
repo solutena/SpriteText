@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/22467083/202491360-8c39378c-1519-4bb1-98c1-2e5876618b9f.png)
 
-# 세팅
+## 세팅
 
 ![image](https://user-images.githubusercontent.com/22467083/202491523-06509dfe-cd53-40a4-949f-94838e36f46a.png)
 
@@ -26,7 +26,7 @@
 
 생성한 아틀라스를 추가합니다
 
-# 사용방법
+## 사용방법
 
 ![image](https://user-images.githubusercontent.com/22467083/202493400-7dd1d560-9335-48ed-a09d-6500670cbdf1.png)
 ![image](https://user-images.githubusercontent.com/22467083/202493429-f78d93a6-b389-49ed-8bff-158c16badb10.png)
