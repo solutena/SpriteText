@@ -162,10 +162,11 @@ public class SpriteText : Text
 			}
 			canvas.renderMode = RenderMode.ScreenSpaceOverlay;
 			go.transform.SetParent(canvas.transform);
-			go.transform.localPosition = Vector3.zero;
 		}
 		else
 			go.transform.SetParent(Selection.activeGameObject.transform);
+		
+		go.transform.localPosition = Vector3.zero;
 		Undo.RegisterCreatedObjectUndo(go, "CreateSpriteText");
 		Selection.activeGameObject = go;
 	}
