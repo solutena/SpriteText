@@ -33,6 +33,11 @@ public class SpriteText : Text
 
 	protected override void OnPopulateMesh(VertexHelper toFill)
 	{
+		if (spriteAtlas == null)
+		{
+			base.OnPopulateMesh(toFill);
+			return;
+		}
 		string orignText = m_Text;
 		m_Text = OutputText;
 		base.OnPopulateMesh(toFill);
@@ -155,6 +160,7 @@ public class SpriteText : Text
 				GameObject canvasGo = new GameObject("Canvas");
 				canvas = canvasGo.AddComponent<Canvas>();
 			}
+			canvas.renderMode = RenderMode.ScreenSpaceOverlay;
 			go.transform.SetParent(canvas.transform);
 			go.transform.localPosition = Vector3.zero;
 		}
