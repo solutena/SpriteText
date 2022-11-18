@@ -16,7 +16,7 @@
 
 스프라이트 혹은 폴더를 추가합니다
 
-![image](https://user-images.githubusercontent.com/22467083/202491861-2c059b4e-43b4-4a03-ac72-85d9b41ba0e4.png) ![image](https://user-images.githubusercontent.com/22467083/202492214-36f1f320-0f2e-495d-8de9-efd7221f230b.png)
+![image](https://user-images.githubusercontent.com/22467083/202491861-2c059b4e-43b4-4a03-ac72-85d9b41ba0e4.png)
 
 캔버스에서 스프라이트 텍스트 생성 혹은 스프라이트 텍스트 컴포넌트를 추가합니다.
 
