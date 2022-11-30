@@ -37,11 +37,11 @@
 ![image](https://user-images.githubusercontent.com/22467083/202493978-92690c0a-fe2e-4e70-9c03-17040dae2fcb.png)
 ![image](https://user-images.githubusercontent.com/22467083/202493960-6e18db8d-d49f-428a-b2bf-dc3961bf3a8f.png)
 
-`x` = 가로위치
+`x` : 가로위치
 
-`y` = 세로위치
+`y` : 세로위치
 
-`size` = 크기를 설정할 수 있습니다.
+`size` : 크기를 설정할 수 있습니다.
 
 x, y, size 는 생략 될 수 있습니다.
 
