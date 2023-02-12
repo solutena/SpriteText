@@ -178,6 +178,7 @@ public class SpriteText : Text
 			Debug.LogError("SpriteAtlas is null", gameObject);
 			return;
 		}
+		base.OnEnable();
 	}
 
 	public Sprite GetSprite(string name, SpriteAtlas spriteAtlas)
