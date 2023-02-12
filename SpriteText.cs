@@ -4,8 +4,8 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
-using UnityEditor;
 #if UNITY_EDITOR
+using UnityEditor;
 using UnityEditor.U2D;
 #endif
 
@@ -165,7 +165,7 @@ public class SpriteText : Text
 		}
 		else
 			go.transform.SetParent(Selection.activeGameObject.transform);
-		
+
 		go.transform.localPosition = Vector3.zero;
 		Undo.RegisterCreatedObjectUndo(go, "CreateSpriteText");
 		Selection.activeGameObject = go;
@@ -185,14 +185,14 @@ public class SpriteText : Text
 	{
 		foreach (var packable in spriteAtlas.GetPackables())
 		{
-			var dirPath = UnityEditor.AssetDatabase.GetAssetPath(packable);
-			var spriteGUIDs = UnityEditor.AssetDatabase.FindAssets($"{name} t:sprite", new string[] { dirPath });
+			var dirPath = AssetDatabase.GetAssetPath(packable);
+			var spriteGUIDs = AssetDatabase.FindAssets($"{name} t:sprite", new string[] { dirPath });
 			if (spriteGUIDs.Length == 0)
 				continue;
 			for (int i = 0; i < spriteGUIDs.Length; i++)
 			{
-				var spritePath = UnityEditor.AssetDatabase.GUIDToAssetPath(spriteGUIDs[i]);
-				var sprite = UnityEditor.AssetDatabase.LoadAssetAtPath<Sprite>(spritePath);
+				var spritePath = AssetDatabase.GUIDToAssetPath(spriteGUIDs[i]);
+				var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(spritePath);
 				if (sprite.name == name)
 					return sprite;
 			}
@@ -200,19 +200,19 @@ public class SpriteText : Text
 		return null;
 	}
 #else
-    public Sprite GetSprite(string name, SpriteAtlas spriteAtlas)
-    {
-        return spriteAtlas.GetSprite(name);
-    }
+	    public Sprite GetSprite(string name, SpriteAtlas spriteAtlas)
+	    {
+	        return spriteAtlas.GetSprite(name);
+	    }
 #endif
 }
 
 #if UNITY_EDITOR
-[UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(SpriteText))]
+[CanEditMultipleObjects]
+[CustomEditor(typeof(SpriteText))]
 public class SpriteTextEditor : UnityEditor.UI.TextEditor
 {
-	UnityEditor.SerializedProperty spriteAtlas;
+	SerializedProperty spriteAtlas;
 
 	protected override void OnEnable()
 	{
@@ -224,7 +224,7 @@ public class SpriteTextEditor : UnityEditor.UI.TextEditor
 	{
 		serializedObject.Update();
 		base.OnInspectorGUI();
-		UnityEditor.EditorGUILayout.PropertyField(spriteAtlas);
+		EditorGUILayout.PropertyField(spriteAtlas);
 		serializedObject.ApplyModifiedProperties();
 	}
 }
