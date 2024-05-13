@@ -14,7 +14,7 @@
 
 ![image](https://user-images.githubusercontent.com/22467083/202492953-bb4783ec-3d6e-46cb-b58e-043847866cdf.png)
 
-스프라이트 혹은 폴더를 추가합니다
+스프라이트 혹은 폴더를 추가합니다.
 
 ![image](https://user-images.githubusercontent.com/22467083/202491861-2c059b4e-43b4-4a03-ac72-85d9b41ba0e4.png)
 
@@ -24,7 +24,7 @@
 ![image](https://user-images.githubusercontent.com/22467083/202492830-bfb045c9-fe0e-4a9b-aec7-f5466215e325.png)
 
 
-생성한 아틀라스를 추가합니다
+생성한 아틀라스를 추가합니다.
 
 ## 사용방법
 
